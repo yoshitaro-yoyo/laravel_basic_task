@@ -24,3 +24,5 @@ Route::get('/', function () {
 //Web.phpからindexのメソッドに処理が割り振られているので
 //PostsControllerにindexのメソッドを記述していく
 Route::get('/', 'PostsController@index')->name('top');
+
+Route::resource('posts', 'PostsController', ['only' =>['create', 'store']]);
