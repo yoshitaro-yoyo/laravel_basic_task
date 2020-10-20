@@ -31,6 +31,10 @@
             </div>
         </div>
         @endforeach
+        
+        <div class="d-flex justify-content-center mb-5">
+            {{$posts->links()}}
+        </div>
     </div>
 
 @endsection('content')  {{-- 親ファイルの展開終了位置 --}}

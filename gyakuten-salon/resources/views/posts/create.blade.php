@@ -20,22 +20,28 @@
                             id="title" 
                             name="title"
                             class="form-control"
+                            value="{{old('title')}}"
                             type="text" 
                         >
                     </div>  
+                    <div class="text-danger">
+                        {{$errors->first('title')}}
+                    </div>
                     <div>
                        <label for="body">
                            本文
                        </label>
                        
                        <textarea
-                            id="body" 
+                            id="body"
                             name="body"
                             class="form-control"
                             rows="4"
-                       >
-                       </textarea>
+                       >{{old('body')}}</textarea>
                        
+                   </div>
+                   <div class="text-danger">
+                       {{$errors->first('body')}}
                    </div>
                    <div class="mt-5">
                        <a class="btn btn-secondary" href="{{route('top')}}">
